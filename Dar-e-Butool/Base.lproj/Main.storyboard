@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fgh-Lx-LnW">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dar-e-Butool-->
+        <scene sceneID="qSl-q9-trw">
+            <objects>
+                <viewController title="Dar-e-Butool" hidesBottomBarWhenPushed="YES" id="Fgh-Lx-LnW" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4QY-hO-nDA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpq-Qc-Ynz">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" lookupSuggestion="YES"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-32-C5v">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Dar-e-Butool" id="vdP-nT-fgD">
+                                        <barButtonItem key="rightBarButtonItem" largeContentSizeImage="icon-ios7-refresh-empty-128.png" style="done" systemItem="refresh" id="5za-qR-NUN">
+                                            <color key="tintColor" red="0.1176470588" green="0.17254901959999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="reloadPage:" destination="Fgh-Lx-LnW" id="NHf-RT-UmP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wv7-32-C5v" firstAttribute="trailing" secondItem="Gpq-Qc-Ynz" secondAttribute="trailing" id="9tJ-sZ-8ct"/>
+                            <constraint firstItem="3t9-8g-QaI" firstAttribute="bottom" secondItem="Gpq-Qc-Ynz" secondAttribute="bottom" id="Bh4-ek-0Ji"/>
+                            <constraint firstItem="Gpq-Qc-Ynz" firstAttribute="leading" secondItem="3t9-8g-QaI" secondAttribute="leading" id="MKd-RX-aKn"/>
+                            <constraint firstItem="Wv7-32-C5v" firstAttribute="top" secondItem="3t9-8g-QaI" secondAttribute="top" id="Zud-Lt-GkU"/>
+                            <constraint firstItem="3t9-8g-QaI" firstAttribute="trailing" secondItem="Gpq-Qc-Ynz" secondAttribute="trailing" id="dYz-Gw-1Sr"/>
+                            <constraint firstItem="Gpq-Qc-Ynz" firstAttribute="top" secondItem="Wv7-32-C5v" secondAttribute="bottom" id="ev9-oK-zjl"/>
+                            <constraint firstItem="Wv7-32-C5v" firstAttribute="leading" secondItem="Gpq-Qc-Ynz" secondAttribute="leading" id="sww-P7-B1m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3t9-8g-QaI"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Gpq-Qc-Ynz" id="bQW-Op-pUH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3g-Bx-7Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1173.913043478261" y="4.8913043478260869"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-ios7-refresh-empty-128.png" width="128" height="128"/>
+    </resources>
+</document>

@@ -53,6 +53,18 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
 
+    // AppStore requirement: launch donation URLs in external browser like Safari.
+    
+    NSURL *url = [request URL];
+    NSString *data = [url host];
+    if([data isEqualToString: @"www.paypal.com"] ||
+       [data isEqualToString:@"commerce.coinbase.com"] ||
+       [data isEqualToString:@"smile.amazon.com"]){
+        UIApplication *application = [UIApplication sharedApplication];
+        [application openURL:url options:@{} completionHandler:nil];
+        return NO;
+    }
+    
     return YES;
 }
 
